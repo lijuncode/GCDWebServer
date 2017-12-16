@@ -56,14 +56,8 @@
       <div class="page-header">
         <h1>导入Kindle笔记：</h1>
       </div>
-<!--        <button type="button" class="btn btn-primary fileinput-button" id="upload-file">-->
-<!--          <span class="glyphicon glyphicon-upload"></span> 上传文件&hellip;-->
-<!--          <input id="fileupload" type="file" name="files[]" multiple>-->
-<!--        </button>-->
 
 <div align="center">
-<!--  <div class="container">-->
-    <div class="upload-container" id="dropzone">
       <div class="steps-container" id="steps-container" style="display:block">
         <div class="steps">
           <div class="step">
@@ -88,20 +82,16 @@
             <p class="step-instruction">找到 My Clippings.txt 文件并上传</p>
           </div>
         </div>
-        <div class="container">
-        <button type="button" class="btn btn-primary fileinput-button" id="upload-file">
-          <span class="glyphicon glyphicon-upload"></span> 上传文件&hellip;
-          <input id="fileupload" type="file" name="files[]" multiple>
-        </button>
-        </div>
+
         <div class="upload-button-container" align="center">
-          <p class="drag-prompt">将文件拖拽进此窗口</p>
+          <button type="button" class="btn btn-primary fileinput-button" id="upload-file">
+            <span class="glyphicon glyphicon-upload"></span> 上传文件&hellip;
+            <input id="fileupload" type="file" name="files[]" multiple>
+          </button>
+          <p class="drag-prompt">或者将文件拖拽进此窗口</p>
         </div>
       </div>
-      <div class="on-drag-container" id="on-drag-container" style="display:none">
-        <img src="/img/upload_book.png" />
-        <p class="step-title">将文件拖拽到此处上传</p>
-      </div>
+
       <div class="uploading-container" id="uploading-container" style="display:none">
         <p class="step-title" id="loading-title">导入中…</p>
         <div class="progress-container">
@@ -109,10 +99,6 @@
         </div>
         <div class="percent" id="percent"></div>
       </div>
-    </div>
-    <div class="wifi-prompt">
-      <p>请确保手机与电脑处在同一wifi环境下</p>
-    </div>
 
 </div>
       <div class="panel panel-default uploading">
