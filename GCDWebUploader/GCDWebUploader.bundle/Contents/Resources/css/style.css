@@ -1,0 +1,136 @@
+.upload-container * {
+  pointer-events: none;
+}
+.container {
+  width: 1000px;
+}
+.upload-container {
+  width: 1000px;
+  height: 618px;
+  margin-top: 50;
+  border-radius: 4px;
+  border: dashed 2px rgba(172, 172, 172, 0.6);
+}
+.steps-container {
+  text-align: center;
+  margin-top: 156px;
+}
+.step {
+  display: inline-block;
+}
+.on-drag-container {
+  margin-top: 200px;
+}
+.uploading-container{
+  margin-top: 50px;
+}
+.next {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  vertical-align: top;
+  margin-top: 50px;
+  margin-left: 13px;
+}
+.step-title {
+  margin-top: 20px;
+  margin-bottom: 0px;
+  height: 28px;
+  font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Noto Sans CJK SC,WenQuanYi Micro Hei,Arial,sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #4a4e57;
+
+}
+.step-instruction {
+  margin-top: 4px;
+  margin-bottom: 0px;
+  height: 40px;
+  font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Noto Sans CJK SC,WenQuanYi Micro Hei,Arial,sans-serif;
+  font-size: 14px;
+  text-align: center;
+  color: #4a4e57;
+}
+.upload-button-container {
+    margin-top: 60px;
+    pointer-events: auto;
+}
+.upload-button {
+  width: 180px;
+  height: 40px;
+  display: table-cell;
+  vertical-align: middle;
+  border-radius: 4px;
+  color: white;
+  border:0px;
+  font:20px Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Noto Sans CJK SC,WenQuanYi Micro Hei,Arial,sans-serif;
+  font-weight: 500;
+  background-color: #40a5ff;
+  pointer-events: all;
+}
+.upload-button:hover {
+  background-color: #5cc7fe;
+}
+.upload-button:active {
+  background-color: #2c73b2;
+}
+.drag-prompt {
+  margin-top: 10px;
+  height: 20px;
+  font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Noto Sans CJK SC,WenQuanYi Micro Hei,Arial,sans-serif;
+  font-size: 14px;
+  color: #acacac;
+}
+.wifi-prompt {
+  width: 279px;
+  height: 37px;
+  border-radius: 100px;
+  background-color: #ececec;
+  margin-top: -18px;
+  display: table;
+}
+.wifi-prompt p {
+  font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Noto Sans CJK SC,WenQuanYi Micro Hei,Arial,sans-serif;
+  font-size: 14px;
+  vertical-align: middle;
+  display: table-cell;
+  text-align: center;
+  color: #4a4e57;
+}
+.logo {
+  margin-top: 20px;
+  display: table;
+  float: left;
+}
+.logo img {
+  display: inline;
+}
+.logo p {
+  vertical-align: middle;
+  display: table-cell;
+  color: #acacac;
+  font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Noto Sans CJK SC,WenQuanYi Micro Hei,Arial,sans-serif;
+  font-size: 13px;
+  padding-left: 5px;
+}
+.progress-container {
+  width: 180px;
+	height: 4px;
+	border-radius: 100px;
+	background-color: #ececec;
+  margin-top: 20px;
+}
+.progress-bar {
+  width: 0%;
+	height: 4px;
+	border-radius: 100px;
+	background-color: #40a5ff;
+  float: left;
+}
+.percent {
+  font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Noto Sans CJK SC,WenQuanYi Micro Hei,Arial,sans-serif;
+  font-size: 14px;
+  color: #acacac;
+  text-align: center;
+  margin-top: 11px;
+}

@@ -36,10 +36,7 @@
     <link rel="stylesheet" href="css/bootstrap-theme.css">
     <link rel="stylesheet" href="css/jquery.fileupload.css">
     <link rel="stylesheet" href="css/index.css">
-    <!--[if lt IE 9]>
-      <script type="text/javascript" src="js/html5shiv.min.js"></script>
-      <script type="text/javascript" src="js/respond.min.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery.ui.widget.js"></script>
     <script type="text/javascript" src="js/jquery.jeditable.js"></script>
@@ -53,30 +50,71 @@
     <script type="text/javascript" src="js/index.js"></script>
   </head>
   <body>
-    
-    <div class="container">
+
+     <div class="container">
       
       <div class="page-header">
-        <h1>%header%</h1>
+        <h1>导入Kindle笔记：</h1>
       </div>
-      
-      %prologue%
-      
-      <div id="alerts"></div>
-      
-      <div class="btn-toolbar">
+<!--        <button type="button" class="btn btn-primary fileinput-button" id="upload-file">-->
+<!--          <span class="glyphicon glyphicon-upload"></span> 上传文件&hellip;-->
+<!--          <input id="fileupload" type="file" name="files[]" multiple>-->
+<!--        </button>-->
+
+<div align="center">
+<!--  <div class="container">-->
+    <div class="upload-container" id="dropzone">
+      <div class="steps-container" id="steps-container" style="display:block">
+        <div class="steps">
+          <div class="step">
+            <img src="/Import_kindle.png" />
+            <p class="step-title">第一步</p>
+            <p class="step-instruction">将您的Kindle链接电脑</p>
+          </div>
+          <div class="next">
+            <img src="/next.png" />
+          </div>
+          <div class="step">
+            <img src="/ft_files.png" />
+            <p class="step-title">第二步</p>
+            <p class="step-instruction">打开Kindle磁盘，打开 documents 文件夹</p>
+          </div>
+          <div class="next">
+            <img src="/next.png" />
+          </div>
+          <div class="step">
+            <img src="/complete.png" />
+            <p class="step-title">第三步</p>
+            <p class="step-instruction">找到 My Clippings.txt 文件并上传</p>
+          </div>
+        </div>
+        <div class="container">
         <button type="button" class="btn btn-primary fileinput-button" id="upload-file">
-          <span class="glyphicon glyphicon-upload"></span> Upload Files&hellip;
+          <span class="glyphicon glyphicon-upload"></span> 上传文件&hellip;
           <input id="fileupload" type="file" name="files[]" multiple>
         </button>
-        <button type="button" class="btn btn-success" id="create-folder">
-          <span class="glyphicon glyphicon-folder-close"></span> Create Folder&hellip;
-        </button>
-        <button type="button" class="btn btn-default" id="reload">
-          <span class="glyphicon glyphicon-refresh"></span> Refresh
-        </button>
+        </div>
+        <div class="upload-button-container" align="center">
+          <p class="drag-prompt">将文件拖拽进此窗口</p>
+        </div>
       </div>
-      
+      <div class="on-drag-container" id="on-drag-container" style="display:none">
+        <img src="/img/upload_book.png" />
+        <p class="step-title">将文件拖拽到此处上传</p>
+      </div>
+      <div class="uploading-container" id="uploading-container" style="display:none">
+        <p class="step-title" id="loading-title">导入中…</p>
+        <div class="progress-container">
+          <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <div class="percent" id="percent"></div>
+      </div>
+    </div>
+    <div class="wifi-prompt">
+      <p>请确保手机与电脑处在同一wifi环境下</p>
+    </div>
+
+</div>
       <div class="panel panel-default uploading">
         <div class="panel-heading">File Uploads in Progress</div>
         <table class="table table-striped"><tbody id="uploads"></tbody></table>
@@ -93,7 +131,7 @@
       
       <p class="footer">%footer%</p>
       
-    </div>
+   </div>
     
     <div class="modal fade" id="create-modal" tabindex="-1">
       <div class="modal-dialog">
